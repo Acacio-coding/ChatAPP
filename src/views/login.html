@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CaseiroZap - Login</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/public/css/login.css" />
+
+    <!-- FavIcon -->
+    <link
+      rel="shortcut icon"
+      href="/public/assets/favicon.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <main id="app" class="container">
+      <section id="gradient-section"></section>
+
+      <section id="form-section" class="flex-column">
+        <p class="subtitle1">Login</p>
+
+        <form class="w-100 flex-column" @submit.prevent="loginAttempt">
+          <div class="input-container flex-column">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter your username"
+              class="w-100"
+              v-model="username"
+              @click="clearUsernameInput"
+            />
+          </div>
+
+          <div class="input-container flex-column">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              class="w-100"
+              v-model="password"
+              @click="clearPasswordInput"
+            />
+          </div>
+
+          <small v-cloak v-if="error" :class="{ shake: animate }"
+            >{{error}}</small
+          >
+
+          <button class="w-100" type="submit">LOGIN</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/reload/reload.js"></script>
+    <script type="module" src="/public/js/api.js"></script>
+    <script type="module" src="/public/js/login.js"></script>
+  </body>
+</html>

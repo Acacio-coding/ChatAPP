@@ -1,0 +1,51 @@
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.subtitle1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.subtitle2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.subtitle3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.subtitle4 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.h-10 {
+  height: 10%;
+  background: green;
+}
+
+.h-5 {
+  height: 5%;
+}

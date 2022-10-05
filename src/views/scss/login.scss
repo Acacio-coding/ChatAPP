@@ -1,0 +1,95 @@
+@forward "global";
+@import "./global/variables";
+
+.container {
+  min-width: 100%;
+  min-height: 100%;
+  background: $bg-dark-10;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+#gradient-section {
+  background: $bg-gradient;
+}
+
+#form-section {
+  color: $text-clr;
+  padding: 2rem;
+  gap: 2.5rem;
+
+  form {
+    gap: 2.5rem;
+
+    small {
+      color: $error-clr;
+      font-size: 14px;
+    }
+
+    .shake {
+      animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+      transform: translate3d(0, 0, 0);
+    }
+
+    @keyframes shake {
+      10%,
+      90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+
+      20%,
+      80% {
+        transform: translate3d(2px, 0, 0);
+      }
+
+      30%,
+      50%,
+      70% {
+        transform: translate3d(-4px, 0, 0);
+      }
+
+      40%,
+      60% {
+        transform: translate3d(4px, 0, 0);
+      }
+    }
+
+    button {
+      padding: 0.5rem;
+      border: 0;
+      border-radius: 0;
+      color: $text-clr;
+      font-weight: bold;
+      letter-spacing: 2px;
+      background: $bg-gradient;
+      opacity: 0.6;
+      outline: 0;
+      transition: 150ms opacity ease-in-out;
+      cursor: pointer;
+
+      &:hover,
+      &:focus-visible {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.input-container {
+  width: 100%;
+  gap: 0.25rem;
+
+  label {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  input {
+    padding: 0.25rem 0;
+    border: 0;
+    outline: 0;
+    border-bottom: solid 1px $text-clr;
+    color: $text-clr;
+    background: transparent;
+  }
+}
